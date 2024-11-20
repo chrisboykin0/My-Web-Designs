@@ -16,9 +16,9 @@ body, html {
 /* Back Button Styles */
 #back-button-container {
   position: absolute;
-  top: 3%;
+  top: 50%;
   left: 10px; /* Align to the left of the chat header */
-  transform: translateY(-5%); /* Vertically center the back button */
+  transform: translateY(-50%); /* Vertically center the back button */
   z-index: 1000; /* Ensure it is on top of other elements */
 }
 
