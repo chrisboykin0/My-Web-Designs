@@ -1,29 +1,83 @@
 /* General Reset */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+body, html {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+/* Login Container */
+#login-container {
+  width: 90%; /* Fill 90% of the screen width */
+  height: 90%; /* Fill 90% of the screen height */
+  background-color: white; /* White background for content */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  justify-content: center;
+  padding: 20px; /* Padding inside the container */
+  box-sizing: border-box;
+  margin: 0 auto; /* This ensures equal space on both sides */
+}
+
+/* Logo and Mockup Text */
+#logo-container {
+  position: relative;
+  width: 80%;
+  height: 10%;
+  margin-bottom: 20px; /* Space between logo and form */
+}
+
+#logo {
+  width: 100%; /* Fill 80% of the container width */
+  height: 100%; /* Maintain height constraint */
+  object-fit: contain; /* Prevent distortion */
+}
+
+#mockup-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 0, 0, 0.6); /* Semi-transparent text */
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+/* Login Header */
+#login-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
 }
 
 /* Login Form */
 #login-form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center form elements */
   gap: 15px;
 }
 
 #login-form label {
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   color: #555;
+  width: 100%; /* Make labels span full width for consistent alignment */
 }
 
 #login-form input {
+  width: 100%; /* Full width of the container */
+  max-width: 300px; /* Limit input size on larger screens */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -44,6 +98,8 @@ body {
   font-weight: bold;
   border: none;
   padding: 10px;
+  width: 100%; /* Full width of the container */
+  max-width: 300px; /* Limit button size */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -53,11 +109,12 @@ body {
   background-color: #005bb5;
 }
 
-  #chat-container {
+
+#chat-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-  }
+}
 
 /* Back Button Styles */
 #back-button-container {
@@ -85,6 +142,33 @@ body {
   color: white;
 }
 
+/* Logout Button Styles */
+#logout-button-container {
+  position: absolute;
+  top: 50%; /* Vertically center within the container */
+  right: 10px; /* Align to the right of the container */
+  transform: translateY(-50%); /* Adjust to true vertical center */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+#logout-button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #007aff;
+  background-color: #f0f8ff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#logout-button:hover {
+  background-color: #007aff;
+  color: white;
+}
+
+
 /* Chat Header */
 #chat-header {
   position: relative;
@@ -94,6 +178,7 @@ body {
   padding: 10px;
   background-color: #007aff;
   color: white;
+  height: 5vh;
 }
 
 #chat-header img.chat-thumbnail {

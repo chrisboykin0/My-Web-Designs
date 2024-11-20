@@ -9,18 +9,21 @@
 <body>
   <div id="login-container">
     <div id="logo-container">
-        <img src="southcarolinafcu-logo">
+        <div id="mockup-text">Mockup</div>
+        <img src="southcarolinafcu-logo.svg" alt="TextApp Logo" id="logo">
     </div>
-    <h1>Welcome to South Carolina Federal Credit Union's Texting App</h1>
-    <form id="login-form">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username" required>
-      
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      
-      <button type="submit" id="login-button">Login</button>
-    </form>
-  </div>
-</body>
-</html>
+    <h1>Welcome to
+        <br>South Carolina Federal Credit Union's
+        <br>Texting App</h1>
+        <form id="login-form" action="textindex.html" method="GET">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <button type="submit" id="login-button">Login</button>
+          </form>
+        </div>
+      </body>
+      </html>
