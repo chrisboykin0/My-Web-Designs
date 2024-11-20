@@ -17,9 +17,9 @@ body, html {
 #back-button-container {
   position: absolute;
   top: 50%;
-  left: 10px; /* Align to the left of the chat header */
-  transform: translateY(-50%); /* Vertically center the back button */
-  z-index: 1000; /* Ensure it is on top of other elements */
+  left: 10px; 
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 
 #back-button {
@@ -41,7 +41,7 @@ body, html {
 
 /* Chat Header */
 #chat-header {
-  position: relative; /* Needed for absolute positioning of back button */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,4 +249,3 @@ body, html {
   #new-chat-button:hover {
     background-color: #005bb5;
   }
-  
