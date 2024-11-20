@@ -12,23 +12,56 @@ body, html {
     flex-direction: column;
     height: 100vh;
   }
-  
-  /* Chat Header */
-  #chat-header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #007aff;
-    color: white;
-  }
-  
-  #chat-header img.chat-thumbnail {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
+
+/* Back Button Styles */
+#back-button-container {
+  position: absolute;
+  top: 3%;
+  left: 10px; /* Align to the left of the chat header */
+  transform: translateY(-5%); /* Vertically center the back button */
+  z-index: 1000; /* Ensure it is on top of other elements */
+}
+
+#back-button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #007aff;
+  background-color: #f0f8ff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#back-button:hover {
+  background-color: #007aff;
+  color: white;
+}
+
+/* Chat Header */
+#chat-header {
+  position: relative; /* Needed for absolute positioning of back button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #007aff;
+  color: white;
+}
+
+#chat-header img.chat-thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#chat-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
   /* Chat Messages */
   #chat-messages {
     flex: 1;
@@ -187,30 +220,6 @@ body, html {
   .chat-time {
     font-size: 12px;
     color: #888;
-  }
-  /* Back Button Styles */
-#back-button-container {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-  }
-  
-  #back-button {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: #007aff;
-    background-color: #f0f8ff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s, color 0.2s;
-  }
-  
-  #back-button:hover {
-    background-color: #007aff;
-    color: white;
   }
   /* Floating New Chat Button */
 #new-chat-button {
