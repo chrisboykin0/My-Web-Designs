@@ -10,10 +10,19 @@ body, html {
     color: #333;
   }
 
+body#login-page{
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 /* Login Container */
 #login-container {
-  width: 90%; /* Fill 90% of the screen width */
-  height: 90%; /* Fill 90% of the screen height */
+  width: 80%; /* Fill 90% of the screen width */
+  height: 80%; /* Fill 90% of the screen height */
   background-color: white; /* White background for content */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -69,7 +78,7 @@ body, html {
 }
 
 #login-form label {
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   color: #555;
   width: 100%; /* Make labels span full width for consistent alignment */
@@ -239,12 +248,20 @@ body, html {
     color: white;
   }
   
+
   /* Chat Input */
   #chat-input {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ccc;
-    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Ensure it's always at the bottom */
+    bottom: env(safe-area-inset-bottom, 0); /* Account for the bottom safe area */
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Match chat page design */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
   }
   
   #chat-input input {
@@ -275,9 +292,13 @@ body, html {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #555;
+    color: #555555;
   }
   
+.message-bubble.sent strong {
+  color: #00ccff;
+}
+
   /* Chat List Container */
 #chat-list-container {
     display: flex;
