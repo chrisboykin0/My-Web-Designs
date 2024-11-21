@@ -428,3 +428,114 @@ body#login-page{
   #new-chat-button:hover {
     background-color: #005bb5;
   }
+
+/* Scroll Box */
+#scroll-box {
+  flex: 1; /* Take up majority of the screen */
+  overflow-y: auto;
+  max-height: 65%;
+  padding-right: 10px; /* Add padding for scroll bar visibility */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+#name-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#name-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#name-list li:last-child {
+  border-bottom: none;
+}
+
+/* Warning Message */
+#warning-message {
+  font-size: 18px;
+  color: red;
+  background-color: #ffe6e6;
+  padding: 5px;
+  border-color: #555;
+  border-style: solid;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Miscellaneous White Container*/
+#misc-white-container {
+  font-size: 14px;
+  color: black;
+  background-color: #7bbbff;
+  padding: 5px;
+  border-color: #555;
+  border-style: solid;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Dropdown Menu and Confirm Button */
+#dropdown-container {
+  padding-top: 10px;
+  padding: 10px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: fixed; /* Ensure it's always at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#action-label {
+  text-align: center;
+}
+
+#action-label label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;  /* Ensure the label is on its own line */
+  margin-bottom: 8px; /* Space between label and the items below it */
+}
+
+#dropdown-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;  /* Space between dropdown and button */
+  flex-wrap: wrap;  /* Allow wrapping on small screens */
+  justify-content: center;
+}
+
+#user-action {
+  padding-top: 20px;padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;  /* Adjust the width of the dropdown */
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.red-button:hover {
+  background-color: darkred;
+}
+
