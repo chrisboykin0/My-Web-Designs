@@ -21,8 +21,8 @@ body#login-page{
 
 /* Login Container */
 #login-container {
-  width: 80%; /* Fill 90% of the screen width */
-  height: 80%; /* Fill 90% of the screen height */
+  width: 70%; /* Fill 90% of the screen width */
+  height: 70%; /* Fill 90% of the screen height */
   background-color: white; /* White background for content */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -251,21 +251,19 @@ body#login-page{
 
   /* Chat Input */
   #chat-input {
-    position: fixed;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-
     display: flex;
     padding: 10px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0)); /* Add space for bottom safe area */  
     border-top: 1px solid #ccc;
-    bottom: env(safe-area-inset-bottom, 0); /* Account for the bottom safe area */
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Ensure it's always at the bottom */
+    bottom: 0;
     left: 0;
     right: 0;
     background-color: #fff; /* Match chat page design */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000;
   }
   
   #chat-input input {
@@ -286,6 +284,7 @@ body#login-page{
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.2s;
   }
   
   #chat-input button:hover {
