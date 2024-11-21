@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextApp - User Maintenance Lockdown</title>
+  <link rel="stylesheet" href="textapp.css">
+</head>
+<body>
+  <div id="chat-list-container">
+    <div id="chat-header">
+        <!-- Back Button -->
+        <div id="back-button-container">
+            <a href="grp-mgr.html" id="back-button">&larr; Back</a>
+        </div>
+      <h1>User Maintenance Lockdown</h1>
+      <div id="logout-button-container">
+        <a href="login.html" id="logout-button">Logout</a>
+      </div>
+    </div>
+    <div id="chat-list">
+      <div id="warning-message">
+        <p>This will temporarily lockdown this user's access.</p>
+      </div>
+      <div id="misc-blue-container">Users in the group:</div>
+      <div id="scroll-box">
+        <ul id="name-list">
+            <!-- Random names will be populated here dynamically -->
+        </ul>
+      </div>
+        <!-- Dropdown Menu and Red Confirm Button -->
+        <div id="dropdown-container">
+          <div id="action-label">
+              <label for="user-action">Length of lockdown:</label>
+          </div>
+          <div id="dropdown-items">
+              <select id="user-action">
+                  <option value="30 Minutes">30 Minutes</option>
+                  <option value="1 hour">1 Hour</option>
+                  <option value="1 Day">1 Day</option>
+              </select>
+              <button id="confirm-button" class="red-button">Confirm</button>
+              </div>
+          </div>
+    <script>
+      // Sample list of random names for the scroll box
+      const names = [
+          "John Doe", "Jane Smith", "Alice Brown", "Bob White", "Charlie Green",
+          "David Black", "Emma Red", "Frank Blue", "Grace Yellow", "Hank Violet",
+          "Ivy Pink", "Jack Orange", "Kara Gray", "Liam Purple", "Mona Silver"
+      ];
+      
+      // Populate the list dynamically
+      const nameList = document.getElementById('name-list');
+      names.forEach(name => {
+          const listItem = document.createElement('li');
+          listItem.textContent = name;
+          nameList.appendChild(listItem);
+      });
+    </script>
+</body>
+</html>

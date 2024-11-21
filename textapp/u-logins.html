@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TextApp - Chats</title>
+  <title>TextApp - User Logins</title>
   <link rel="stylesheet" href="textapp.css">
 </head>
 <body>
@@ -19,6 +19,91 @@
       </div>
     </div>
     <div id="chat-list">
-  </div>
+      <div id="misc-blue-container">
+        User Login History:
+      </div>
+      <main>
+        <section id="search-container">
+            <label>Search by:</label>
+            <div id="search-options">
+                <label>
+                    <input type="radio" id="chat-id" name="search" value="chat-id"> User ID
+                </label>
+                <label>
+                    <input type="radio" id="username" name="search" value="username"> Username
+                </label>
+            </div>
+            <input type="text" id="search-query">
+            <div>
+            <a href="archives-results.html" id="search-button" class="button">Search</a>
+          </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section id="results-container">
+          <h2>Results</h2>
+          <table id="results-table">
+              <thead>
+                  <tr>
+                      <th>User ID</th>
+                      <th>Username</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Last Login</th>
+                      <th>Device Name</th>
+                      <th>Usage Time Last 24 hrs</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>12345</td>
+                      <td>John_doe</td>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>11/10/2024 09:05:10</td>
+                      <td>Mobile Phone</td>
+                      <td>2.75 hours</td>
+                  </tr>
+                  <tr>
+                      <td>67890</td>
+                      <td>alice_wonder</td>
+                      <td>Alice</td>
+                      <td>Wonder</td>
+                      <td>11/09/2024 10:05:10</td>
+                      <td>Website</td>
+                      <td>1.50 hours</td>
+                  </tr>
+                  <tr>
+                      <td>54321</td>
+                      <td>charlie_green</td>
+                      <td>Charlie</td>
+                      <td>Green</td>
+                      <td>11/18/2024 13:05:10</td>
+                      <td>Pearphone</td>
+                      <td>2.75 hours</td>
+                  </tr>
+                  <tr>
+                      <td>98765</td>
+                      <td>mark_johnson</td>
+                      <td>Mark</td>
+                      <td>Johnson</td>
+                      <td>11/01/2024 16:05:10</td>
+                      <td>Android</td>
+                      <td>2.75 hours</td>
+                  </tr>
+                  <tr>
+                      <td>13579</td>
+                      <td>susan_miller</td>
+                      <td>Susan</td>
+                      <td>Miller</td>
+                      <td>11/10/2024 09:05:10</td>
+                      <td>Mobile Phone</td>
+                      <td>2.75 hours</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+    </main>
+    </div>
 </body>
 </html>
