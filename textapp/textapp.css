@@ -23,6 +23,7 @@ body#login-page{
 #login-container {
   width: 70%; /* Fill 90% of the screen width */
   height: 70%; /* Fill 90% of the screen height */
+  min-height: 500px;
   background-color: white; /* White background for content */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -429,10 +430,40 @@ body#login-page{
     background-color: #005bb5;
   }
 
+/* Warning Message */
+#warning-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: red;
+  background-color: #ffe6e6;
+  padding: 5px;
+  border-color: #555;
+  border-style: solid;
+  border-radius: 8px;
+  text-align: center;
+  height: 4vh;
+}
+
+/* Miscellaneous Blue Container*/
+#misc-blue-container {
+  font-size: 14px;
+  color: black;
+  background-color: #7bbbff;
+  padding: 5px;
+  border-color: #555;
+  border-style: solid;
+  border-radius: 8px;
+  text-align: center;
+  height: 2.5vh;
+}
+
 /* Scroll Box */
 #scroll-box {
   flex: 1; /* Take up majority of the screen */
   overflow-y: auto;
+  height: auto;
   max-height: 65%;
   padding-right: 10px; /* Add padding for scroll bar visibility */
   border: 1px solid #ccc;
@@ -455,30 +486,6 @@ body#login-page{
 
 #name-list li:last-child {
   border-bottom: none;
-}
-
-/* Warning Message */
-#warning-message {
-  font-size: 18px;
-  color: red;
-  background-color: #ffe6e6;
-  padding: 5px;
-  border-color: #555;
-  border-style: solid;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Miscellaneous White Container*/
-#misc-white-container {
-  font-size: 14px;
-  color: black;
-  background-color: #7bbbff;
-  padding: 5px;
-  border-color: #555;
-  border-style: solid;
-  border-radius: 8px;
-  text-align: center;
 }
 
 /* Dropdown Menu and Confirm Button */
@@ -539,3 +546,9 @@ body#login-page{
   background-color: darkred;
 }
 
+@media (max-width: 768px) {
+  /* Adjustments for small screens */
+  #scroll-box {
+      max-height: 40vh; /* Adjust the max height to make sure it stays within the screen */
+  }
+}
