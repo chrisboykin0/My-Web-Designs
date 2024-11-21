@@ -251,12 +251,16 @@ body#login-page{
 
   /* Chat Input */
   #chat-input {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
     display: flex;
     padding: 10px;
     border-top: 1px solid #ccc;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed; /* Ensure it's always at the bottom */
     bottom: env(safe-area-inset-bottom, 0); /* Account for the bottom safe area */
     left: 0;
     right: 0;
