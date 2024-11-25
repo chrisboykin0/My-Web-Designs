@@ -643,3 +643,26 @@ body#login-page{
 #results-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+/* Modal container styling */
+.modalProhibited {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content styling */
+.modalProhibited-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  color: red;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
